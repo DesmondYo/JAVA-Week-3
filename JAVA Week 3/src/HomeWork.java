@@ -4,7 +4,7 @@ public class HomeWork {
 
 		public static void main(String[] args) {
 		
-				// 1A & B. 
+					// 1A & B. 
 						int [] ages = { 2, 3, 8, 9, 23, 28, 64, 93, 100};
 						int averageOfAges = ages.length;
 						int numberOne = ages [ages.length - ages.length];
@@ -119,22 +119,22 @@ public class HomeWork {
 						System.out.println(isSumGreaterThan100(milesPerHour));
 						
 					// 10 & 11. 
-						double[] movieRatings = new double [5];
+						double[] numbers1 = new double [5];
 						
-						movieRatings[0] = 97.5;
-						movieRatings[1] = 87.6;
-						movieRatings[2] = 84.4;
-						movieRatings[3] = 93.5;
-						movieRatings[4] = 83.6;
+						numbers1[0] = 97.5;
+						numbers1[1] = 87.6;
+						numbers1[2] = 84.4;
+						numbers1[3] = 93.5;
+						numbers1[4] = 83.6;
 						
-						double[] showRatings = new double [4];
+						double[] numbers2 = new double [4];
 						
-						showRatings[0] = 93.32;
-						showRatings[1] = 93.32;
-						showRatings[2] = 93.32;
-						showRatings[3] = 93.32;
+						numbers2[0] = 93.32;
+						numbers2[1] = 93.32;
+						numbers2[2] = 93.32;
+						numbers2[3] = 93.32;
 						
-						System.out.println(calculateAverage (movieRatings));
+						System.out.println(calculateAverage (numbers1));
 						
 					// 12.
 						int hotWeather = 100;
@@ -163,8 +163,8 @@ public class HomeWork {
 					
 						System.out.println("Who is the greatest of them all = " + whoIsTheGreatestBasketballPlayer (kobeBryantsAveragePoints) );
 						
-		}						
-				// 7. 
+				}						
+					// 7. 
 					public static String multiplyString (String str, int num) {
 						String result ="";
 						for (int i = 0; i < num; i++) {
@@ -205,18 +205,10 @@ public class HomeWork {
 						}
 
 					// 11. 
-						public static boolean calculateAverage1 (double[] movieRatings) {
-							
-							double showRatings = 0;
-							for (int i = 0; i < movieRatings.length; i++) {
-								showRatings += movieRatings[i];
-							}
-							
-							if (showRatings > movieRatings.length) {
-								return true;
-							} else {
-							return false;
-							}
+						public static boolean calculateAverage1 (double[] numbers1, double [] numbers2) {
+							double number1Average = calculateAverage(numbers1);
+							double number2Average = calculateAverage(numbers2);
+							return (number1Average > number2Average);
 						}
 					
 					// 12. 
@@ -244,8 +236,8 @@ public class HomeWork {
 							return false;
 						}
 						
-	}
-}
+					}
+				}
 			
 			
 			
