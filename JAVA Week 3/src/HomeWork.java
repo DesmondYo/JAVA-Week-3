@@ -161,7 +161,7 @@ public class HomeWork {
 						lebronJamesAveragePoints [3] = 54.54;
 						lebronJamesAveragePoints [4] = 23.65;
 					
-						System.out.println("Who is the greatest of them all = " + whoIsTheGreatestBasketballPlayer (kobeBryantsAveragePoints) );
+						System.out.println(whoIsTheGreatestBasketballPlayer(kobeAveragePoints, lebronAveragePoints));
 						
 				}						
 					// 7. 
@@ -217,27 +217,34 @@ public class HomeWork {
 						}
 						
 					// 13. 
-						// This method determines who is the greatest basketball player and that is factored by average points. I took Kobe Bryant's and Lebron James average points and it returned true
+						// This method determines who is the greatest basketball player and that is factored by average points. I took Kobe Bryant's and Lebron James average points and it returned Kobe or Lebron to see who is the greatest basketball player. 
 						// because Kobe had better points than Lebron. I created this to show accurate points and decide who was the better basketball player. 
 						
-						public static boolean whoIsTheGreatestBasketballPlayer (double [] lebronJamesAveragePoints) {
+						public static String whoIsTheGreatestBasketballPlayer(double[] kobeAveragePoints, double[] lebronAveragePoints) {
 						
-						double kobeBryantsAveragePoints = 0;
-						
-						for (int i = 0; i < lebronJamesAveragePoints.length; i++) {
+							double kobe = calculateAverage(kobeAveragePoints);
+							double lebron = calculateAverage(lebronAveragePoints);
 							
-							kobeBryantsAveragePoints+=lebronJamesAveragePoints[i];
-						
+							if (lebron > kobe) {
+								return "Lebron";
+							} else if (kobe > lebron) {
+								return "Kobe";
+							}
+							return "Tie";
 						}
 						
-						if (kobeBryantsAveragePoints > lebronJamesAveragePoints.length ) {
-							return true;
-						} else {
-							return false;
+						public static double calculateAverage1 (double[] numbers) {
+							
+							double sum = 0;
+							
+							for (double number : numbers) {
+								sum += number;
+							}
+							return sum / numbers.length;
 						}
 						
-					}
-				}
+					
+				
 			
 			
 			
